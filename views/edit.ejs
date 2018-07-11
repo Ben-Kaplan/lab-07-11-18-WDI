@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Alien</h1>
+	<form method="POST" action="/aliens/<%=index%>?_method=PUT">
+		Name: <input type="text" name="name" value="<%=aliens.name%>">
+		Homeworld: <input type="text" name="homeworld" value="<%=aliens.homeworld%>">
+		Age: <input type="text" name="age" value="<%=aliens.age%>">
+		Color: <input type="text" name="color" value="<%=aliens.color%>">
+		<input type="submit" value="submit">
+	</form>
+
+
+</body>
+</html>

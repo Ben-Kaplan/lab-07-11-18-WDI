@@ -7,9 +7,9 @@
 	<h1>Aliens!!!</h1>
 	<%for (let i = 0; i < aliens.length; i++) { %>
 		<h3><%=aliens[i].name%></h3>
-		<form method="POST" action="/aliens/<%=i%>?_method=DELETE">
-			<input type="submit" name="DELETE">
-		</form>
+		
+		<a href="/aliens/<%=i%>">View Alien Stats</a>
+		
 		<% } %>
 
 

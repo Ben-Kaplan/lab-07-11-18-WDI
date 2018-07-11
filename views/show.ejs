@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Alien</h1>
+		<h2><%=aliens.name%></h2>
+		<h2><%=aliens.homeworld%></h2>
+		<h2><%=aliens.age%></h2>
+		<h2><%=aliens.color%></h2>
+		<a href="/aliens/<%=index%>/edit">EDIT</a>
+		<form method="POST" action="/aliens/<%=index%>?_method=DELETE">
+			<input type="submit" name="DELETE">
+		</form>
+
+	
+
+
+</body>
+</html>

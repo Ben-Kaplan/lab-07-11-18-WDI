@@ -16,9 +16,18 @@ app.delete("/aliens/:index", (req,res) => {
 	Aliens.splice(req.params.index, 1);
 	res.redirect("/aliens");
 	
-})
-app.get("aliens/:index", (req, res) => {
-	res.render("show.ejs", )
+});
+app.get("/aliens/:index/edit", (req, res) => {
+	res.render("edit.ejs", {aliens: Aliens[req.params.index],
+		index: req.params.index});
+});
+app.put("/aliens/:index", (req, res) => {
+	Aliens[req.params.index] = req.body;
+	console.log("Aliens")
+	res.redirect("/aliens");
+});
+app.get("/aliens/:index", (req, res) => {
+	res.render("show.ejs", {aliens: Aliens[req.params.index], index: req.params.index})
 });
 
 
